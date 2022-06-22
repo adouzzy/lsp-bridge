@@ -405,7 +405,7 @@ user more freedom to use rg with special arguments."
 
   ;; Pop search buffer.
   (delete-other-windows)
-  (split-window nil (* 0.618 (window-pixel-height)) nil t)
+  (funcall split-window-preferred-function)
   (other-window 1)
   (switch-to-buffer lsp-bridge-ref-buffer)
   (goto-char (point-min)))
